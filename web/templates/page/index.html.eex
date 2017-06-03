@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="team-menu">Varsity Tutors</div>
+  <div class="channel-menu"><span class="channel-menu_name"><span class="channel-menu_prefix">#</span>                general</span></div>
+</div>
+<div class="main">
+  <div class="listings">
+    <div class="listings_channels">
+      <h2 class="listings_header">Channels</h2>
+      <ul class="channel_list">
+        <li class="channel active"><a class="channel_name"><span class="unread">10</span><span><span class="prefix">#</span>general</span></a></li>
+        <li class="channel"><a class="channel_name"><span class="unread">0</span><span><span class="prefix">#</span>watercooler</span></a></li>
+      </ul>
+    </div>
+    <div class="listings_direct-messages">
+      <h2 class="listings_header">Direct Messages</h2>
+      <ul class="channel_list" id="UserList">
+      </ul>
+    </div>
+  </div>
+  <div class="message-history" id="MessageList">
+    <p style="font-family: Segoe UI Emoji; font-size: 3.5em"></p>
+  </div>
+</div>
+<div class="footer">
+  <div class="user-menu"><span class="user-menu_profile-pic"></span><span class="user-menu_username" id="User"><%= @conn.params["user"] %></span><img class="connection_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Green_sphere.svg/2000px-Green_sphere.svg.png"/><span class="connection_status">online</span></div>
+  <div class="input-box">
+    <input type="text" id="NewMessage" placeholder="Type and press enter..." class="input-box_text">
+  </div>
+</div>
