@@ -14,9 +14,11 @@ use Mix.Config
 config :office_talk, OfficeTalk.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [host: System.get_env("HOSTNAME"), port: 80],
+  root: ".",
   server: true,
   check_origin: false,
-  cache_static_manifest: "priv/static/manifest.json"
+  cache_static_manifest: "priv/static/manifest.json",
+  version: Mix.Project.config[:version]
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -50,7 +52,7 @@ config :logger, level: :info
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start the server for all endpoints:
 #
-#     config :phoenix, :serve_endpoints, true
+    config :phoenix, :serve_endpoints, true
 #
 # Alternatively, you can configure exactly which server to
 # start per endpoint:
