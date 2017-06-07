@@ -18,8 +18,6 @@ Vagrant.configure('2') do |config|
   config.vm.network :private_network, ip: '192.168.55.55'
   config.vm.network :forwarded_port, guest: 4000, host: 4000
 
-  config.vm.provision :shell, path: 'vagrant_provision.sh'
-  config.vm.provision :shell, path: 'vagrant_setup.sh', privileged: false
-  # config.vm.provision :shell, path: 'server_start.sh', privileged: false,
-  #                             run: 'always'
+  config.vm.provision :shell, path: 'build/vagrant_provision.sh'
+  config.vm.provision :shell, path: 'build/vagrant_setup.sh', privileged: false
 end
